@@ -25,7 +25,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-cred', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     script {
-                        def dockerImageTag = "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:v0.${BUILD_NUMBER}"
+                        def dockerImageTag = "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:v0.${DOCKER_IMAGE_TAG}"
                         sh "docker login -u ${env.DOCKER_USERNAME} -p ${env.DOCKER_PASSWORD} ${DOCKER_REGISTRY}"
                         sh "docker push ${dockerImageTag}"
                     }
