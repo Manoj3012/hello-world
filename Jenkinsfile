@@ -7,7 +7,7 @@ pipeline {
         DOCKER_REGISTRY = "docker.io"
         DOCKER_IMAGE_NAME = "manombamm/task"
         DOCKER_IMAGE_TAG = "${env.BUILD_NUMBER}" // Set Docker image tag to Jenkins build number
-        GITHUB_REPO_URL = "https://github.com/Manoj3012/devOpsWeb.git"
+        GITHUB_REPO_URL = "https://github.com/Manoj3012/hello-world.git"
         GIT_CREDENTIALS_ID = "Git-cred"
     }
 
